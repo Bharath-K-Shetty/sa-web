@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: #00163d;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-pp-neuebit), sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar globally for all elements */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure sections have no gaps */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Blinks Card Hover Effect */
+.blink-card {
+  transition: all 200ms ease;
+}
+
+.blink-card:hover {
+  box-shadow: 0px 4px 16px 0px rgba(59, 130, 246, 0.15),
+    0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.blink-play-button {
+  transition: all 200ms ease;
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blink-button:hover:not(:disabled) {
+  background-color: rgb(59, 130, 246) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blink-button:active:not(:disabled) {
+  transform: translateY(0px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blink-button:disabled {
+  pointer-events: none;
+}
+
+.blink-button-loading {
+  flex-shrink: 0;
+}
+
+.blink-button-text {
+  white-space: nowrap;
+}
+
+/* React Tweet Overrides */
+[data-theme='dark'] {
+  --tweet-bg-color: transparent !important;
+  --tweet-border-color: transparent !important;
+  --tweet-font-family: var(--font-pp-neuebit), sans-serif !important;
+}
+
+.react-tweet-container {
+  margin: 0 !important;
+  height: 700px;
+  /* Fixed height for all cards */
+  display: flex;
+}
+
+.react-tweet-container .react-tweet-container {
+  margin: 0 !important;
+  width: 100%;
+}
+
+/* Internal scroll for long tweets within the fixed height */
+.react-tweet-container article {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  scrollbar-width: none;
+  /* Hide scrollbar for cleaner look */
+}
+
+.react-tweet-container article::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Ensure the text inside tweets is legible against the dark background */
+[data-theme='dark'] .tweet-header-name,
+[data-theme='dark'] .tweet-content-text {
+  color: #f8fafc !important;
+}
+
+/* Skeleton Loading Animation */
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.skeleton {
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.03) 20%,
+      rgba(255, 255, 255, 0.06) 60%,
+      rgba(255, 255, 255, 0));
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
