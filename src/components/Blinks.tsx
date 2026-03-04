@@ -3,39 +3,7 @@ import Image from "next/image";
 
 const Blinks: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isExecuting, setIsExecuting] = useState(false);
   const [isTouching, setIsTouching] = useState(false);
-
-  // Safari-compatible redirect handler
-  const handlePlayClick = (e: React.MouseEvent | React.TouchEvent) => {
-    // Prevent event bubbling
-    e.preventDefault();
-    e.stopPropagation();
-
-    // Set executing state immediately
-    setIsExecuting(true);
-
-    // Safari requires immediate redirect from user gesture - no setTimeout delay
-    // Open in new tab immediately while we still have user gesture context
-    const newWindow = window.open("https://blinks.sendarcade.fun", "_blank");
-
-    // Reset state after a brief moment for visual feedback
-    setTimeout(() => {
-      setIsExecuting(false);
-    }, 800);
-
-    // Fallback: if popup was blocked, try direct navigation
-    if (
-      !newWindow ||
-      newWindow.closed ||
-      typeof newWindow.closed === "undefined"
-    ) {
-      // Popup blocked - try direct navigation as fallback
-      setTimeout(() => {
-        window.location.href = "https://blinks.sendarcade.fun";
-      }, 100);
-    }
-  };
 
   // Touch event handlers for mobile
   const handleTouchStart = () => {
