@@ -167,12 +167,12 @@ const Navbar = () => {
           {/* Play Now CTA */}
           <button
             onClick={() =>
-              window.open("https://blinks.sendarcade.fun/", "_blank")
+              window.open("https://www.futard.io/", "_blank")
             }
             className="hidden sm:flex items-center transition-all duration-300 hover:scale-110 active:scale-95"
           >
             <Image
-              src="/PlayBtn.svg"
+              src="/Arcade.svg"
               alt="Play Now"
               width={160}
               height={44}
@@ -251,13 +251,13 @@ const Navbar = () => {
             <div className="h-px bg-white/10 my-2" />
             <button
               onClick={() => {
-                window.open("https://blinks.sendarcade.fun/", "_blank");
+                window.open("https://www.futard.io/", "_blank");
                 setIsMenuOpen(false);
               }}
               className="w-full flex justify-center py-2 transition-all duration-200 active:scale-95"
             >
               <Image
-                src="/PlayBtn.svg"
+                src="/Arcade.svg"
                 alt="Play Now"
                 width={160}
                 height={44}

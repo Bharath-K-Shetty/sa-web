@@ -202,22 +202,20 @@ const Blinks: React.FC = () => {
             }}
           >
             <button
-              onClick={handlePlayClick}
-              onTouchEnd={handlePlayClick} // Add touch support for mobile
-              disabled={isExecuting}
+              disabled={true}
               className="blink-button"
               style={{
                 height: "clamp(28px, 2.3vw, 43px)",
                 padding: "clamp(8px, 0.65vw, 12px) clamp(16px, 1.3vw, 24px)",
                 borderRadius: "clamp(100px, 8vw, 164px)",
-                background: isExecuting ? "rgb(156, 163, 175)" : "#499BEA",
+                background: "rgb(156, 163, 175)",
                 color: "white",
                 fontSize: "20px",
                 fontWeight: 600,
                 letterSpacing: "-0.47px",
                 border: "none",
-                cursor: isExecuting ? "not-allowed" : "pointer",
-                opacity: isExecuting ? "0.6" : "1",
+                cursor: "default",
+                opacity: "0.6",
                 transition: "all 0.2s ease",
                 display: "flex",
                 justifyContent: "center",
@@ -230,22 +228,9 @@ const Blinks: React.FC = () => {
                 WebkitTapHighlightColor: "transparent",
               }}
             >
-              {isExecuting && (
-                <div
-                  className="blink-button-loading"
-                  style={{
-                    width: "clamp(14px, 1.1vw, 18px)",
-                    height: "clamp(14px, 1.1vw, 18px)",
-                    border: "2px solid rgba(255, 255, 255, 0.3)",
-                    borderTop: "2px solid white",
-                    borderRadius: "50%",
-                    animation: "blink-spin 1s linear infinite",
-                    marginRight: "8px",
-                  }}
-                />
-              )}
+
               <span className="blink-button-text">
-                {isExecuting ? "Executing..." : "Play"}
+                SEASON ENDED
               </span>
             </button>
           </div>

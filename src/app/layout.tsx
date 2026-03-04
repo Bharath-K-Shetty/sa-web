@@ -69,7 +69,7 @@ export default function RootLayout({
         {/* Video preload hints for metadata only */}
         <link rel="preload" as="video" href="https://pub-c4d90db77e92437ea367b7af11523bec.r2.dev/sendguys-video.mp4" />
         <link rel="preload" as="video" href="https://pub-c4d90db77e92437ea367b7af11523bec.r2.dev/lanaroads-video.mp4" />
-        <link rel="preload" as="video" href="/products/app-video.mp4" />
+        <link rel="preload" as="video" href="https://pub-c4d90db77e92437ea367b7af11523bec.r2.dev/ArcadeApp.mp4" />
 
         {/* Performance hints */}
         <meta

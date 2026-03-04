@@ -75,7 +75,7 @@ const Footer = () => {
                     height={36}
                     className="cursor-pointer relative z-20 sm:w-12 sm:h-12"
                     onClick={() =>
-                      handleSocialClick("discord", "https://discord.gg/sendarcade")
+                      handleSocialClick("discord", "https://discord.gg/xEH7BpKX")
                     }
                   />
                 </div>
@@ -161,8 +161,8 @@ const Footer = () => {
           }}
         >
           <Image
-            src="/SENDCoin-Left.png"
-            alt="Arcade Coin Left"
+            src="/footer/LeftHorse.svg"
+            alt="Horse Left"
             width={120}
             height={120}
             className="w-20 h-20 sm:w-24 sm:h-24 lg:w-[200px] lg:h-[200px]"
@@ -175,8 +175,8 @@ const Footer = () => {
           }}
         >
           <Image
-            src="/SENDCoin-Right.png"
-            alt="Arcade Coin Right"
+            src="/footer/RightHorse.svg"
+            alt="Horse Right"
             width={120}
             height={120}
             className="w-20 h-20 sm:w-24 sm:h-24 lg:w-[200px] lg:h-[200px]"

@@ -488,7 +488,7 @@ const Products = () => {
                 }}
                 data-video="app"
               >
-                <source src="/products/app-video.mp4" type="video/mp4" />
+                <source src="https://pub-c4d90db77e92437ea367b7af11523bec.r2.dev/ArcadeApp.mp4" type="video/mp4" />
               </video>
 
               {/* Coming Soon Overlay */}
@@ -550,7 +550,7 @@ const Products = () => {
             <div className="flex flex-col gap-4 lg:gap-[4vw] flex-shrink-0">
               {/* SendGuys - Top */}
               <div
-                className="relative cursor-pointer"
+                className="relative"
                 style={{
                   width: "clamp(340px, 34vw, 674px)",
                   aspectRatio: "674.19/469.93",
@@ -571,7 +571,6 @@ const Products = () => {
                   handleTouchEnd("sendGuys");
                   handleVideoPause(sendGuysVideoRef);
                 }}
-                onClick={() => handleRedirect("https://guys.sendarcade.fun")}
               >
                 {!videosReady.sendGuys && <div className="absolute inset-0 skeleton z-30 pointer-events-none" style={{ borderRadius: 'inherit' }} />}
                 {/* Base Casset */}
@@ -648,11 +647,38 @@ const Products = () => {
                 >
                   <source src="https://pub-c4d90db77e92437ea367b7af11523bec.r2.dev/sendguys-video.mp4" type="video/mp4" />
                 </video>
+
+                {/* Season Ended Tag */}
+                <div
+                  className="px-4 py-1.5 sm:px-6 sm:py-2 rounded-full"
+                  style={{
+                    position: "absolute",
+                    bottom: "12%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    backgroundColor: "rgba(1, 52, 140, 0.4)",
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    border: "1.5px solid rgba(255, 255, 255, 0.8)",
+                    color: "white",
+                    fontFamily: "var(--font-pp-neue-bit)",
+                    fontSize: "clamp(12px, 1.4vw, 20px)",
+                    fontWeight: "bold",
+                    zIndex: 10,
+                    letterSpacing: "0.05em",
+                    textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.1)",
+                    pointerEvents: "none",
+                    whiteSpace: "nowrap"
+                  }}
+                >
+                  SEASON ENDED
+                </div>
               </div>
 
               {/* Lana Roads - Bottom */}
               <div
-                className="relative cursor-pointer"
+                className="relative"
                 style={{
                   width: "clamp(340px, 34vw, 674px)",
                   aspectRatio: "674.19/469.93",
@@ -673,7 +699,6 @@ const Products = () => {
                   handleTouchEnd("lanaRoads");
                   handleVideoPause(lanaRoadsVideoRef);
                 }}
-                onClick={() => handleRedirect("https://lanaroads.sendarcade.fun")}
               >
                 {!videosReady.lanaRoads && <div className="absolute inset-0 skeleton z-30 pointer-events-none" style={{ borderRadius: 'inherit' }} />}
                 {/* Base Casset */}
@@ -750,6 +775,33 @@ const Products = () => {
                 >
                   <source src="https://pub-c4d90db77e92437ea367b7af11523bec.r2.dev/lanaroads-video.mp4" type="video/mp4" />
                 </video>
+
+                {/* Season Ended Tag */}
+                <div
+                  className="px-4 py-1.5 sm:px-6 sm:py-2 rounded-full"
+                  style={{
+                    position: "absolute",
+                    bottom: "12%",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    backgroundColor: "rgba(1, 52, 140, 0.4)",
+                    backdropFilter: "blur(12px)",
+                    WebkitBackdropFilter: "blur(12px)",
+                    border: "1.5px solid rgba(255, 255, 255, 0.8)",
+                    color: "white",
+                    fontFamily: "var(--font-pp-neue-bit)",
+                    fontSize: "clamp(12px, 1.4vw, 20px)",
+                    fontWeight: "bold",
+                    zIndex: 10,
+                    letterSpacing: "0.05em",
+                    textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.1)",
+                    pointerEvents: "none",
+                    whiteSpace: "nowrap"
+                  }}
+                >
+                  SEASON ENDED
+                </div>
               </div>
             </div>
           </div>
@@ -761,7 +813,7 @@ const Products = () => {
           >
             {/* Frame 1 - Squid Game */}
             <div
-              className="relative flex-shrink-0 cursor-pointer"
+              className="relative flex-shrink-0"
               style={{
                 width: "clamp(320px, 25vw, 480px)",
                 height: "clamp(420px, 34vw, 630px)", // Match new Blinks height
@@ -798,7 +850,6 @@ const Products = () => {
                   squidGameVideoRef.current.pause();
                 }
               }}
-              onClick={() => handleRedirect("https://squid-game.sendarcade.fun")}
             >
               {!videosReady.squidGame && <div className="absolute inset-0 skeleton z-30 pointer-events-none" />}
               <video
