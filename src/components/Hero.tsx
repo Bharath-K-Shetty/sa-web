@@ -288,7 +288,7 @@ const Hero = () => {
               <div className="absolute bottom-4 left-4 flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_white] animate-pulse" />
                 <span className="text-[10px] sm:text-xs text-white/50 tracking-[0.3em] font-bold" style={{ fontFamily: "var(--font-pp-neue-bit)" }}>
-                  {videos[currentImageIndex].channel} // {videos[currentImageIndex].label}
+                  {videos[currentImageIndex].channel} {"//"} {videos[currentImageIndex].label}
                 </span>
               </div>
 

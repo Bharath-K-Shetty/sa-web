@@ -53,10 +53,6 @@ const Products = () => {
     fuseMe: false,
   });
 
-  const [imagesLoaded, setImagesLoaded] = useState<{ [key: string]: boolean }>({});
-  const handleImageLoad = (key: string) => {
-    setImagesLoaded(prev => ({ ...prev, [key]: true }));
-  };
 
   // Preload videos and images on component mount
   useEffect(() => {

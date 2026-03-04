@@ -121,7 +121,6 @@ const storyBlocks: StoryBlock[] = [
 /* ── Single Story Row (image left, text right) ──────────── */
 function StoryRow({
   block,
-  index,
 }: {
   block: StoryBlock;
   index: number;
