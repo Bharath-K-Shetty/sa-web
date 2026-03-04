@@ -12,13 +12,6 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year for static images
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "pub-c4d90db77e92437ea367b7af11523bec.r2.dev",
-        pathname: "/**",
-      },
-    ],
   },
 
   // Headers for better caching and preloading
@@ -61,12 +54,6 @@ const nextConfig: NextConfig = {
   // Compression and optimization
   compress: true,
   poweredByHeader: false,
-
-  // Build optimizations
-  swcMinify: true,
-
-  // Asset optimization
-  assetPrefix: process.env.NODE_ENV === "production" ? "" : "",
 };
 
 export default nextConfig;
